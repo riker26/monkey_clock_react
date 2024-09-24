@@ -1,0 +1,112 @@
+:root {
+    --minute-ticker-color: #b1b1b1;
+    --hands-color: #d1d1d1;
+    --border-color: #fed7d7;
+    --hand-thickness-multiplier: 2;
+    --face-color: rgba(90, 90, 90, 0.265);
+  }
+
+/* clock hands and stuff */
+
+/* Minute, Hour Marks */
+  .react-clock__minute-mark__body {
+    background-color: var(--minute-ticker-color) !important;  /* Change the minute marks to white */
+    width: 5px !important;  /* Make the minute marks wider */
+  }
+  
+  .react-clock__hour-mark__body {
+    background-color: var(--minute-ticker-color) !important;  /* Change the hour marks to white */
+  }
+  
+/* Hands */
+  .react-clock__minute-hand__body {
+    background-color: var(--hands-color) ; 
+    width: 10px !important;  /* Make the minute hand wider */ 
+    border-radius: 15px !important ;  /* Make the minute hand round */
+  }
+  
+  .react-clock__hour-hand__body {
+    background-color: var(--hands-color)  ; 
+    width: 15px !important;  /* Make the hour hand wider */
+    border-radius: 15px !important ;  /* Make the hour hand round */ 
+  }
+
+  .react-clock__second-hand__body {
+    background-color: red;
+    width: 15px !important;   /* Thicker second hand */
+    border-radius: 15px !important ;  /* Make the second hand round */
+  }
+  
+  
+/* Hour Numbers */
+    .react-clock__mark__number {
+    padding: 20px;
+    color: rgb(204, 204, 204) !important;
+    font-size: 30px;
+    font-weight: 700;  
+    font-family: 'Nunito', sans-serif;  
+  }
+  
+  
+  /* == */
+  
+  .react-clock {
+    display: block;
+    position: relative;
+  }
+  
+  .react-clock,
+  .react-clock *,
+  .react-clock *:before,
+  .react-clock *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .react-clock__face {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid var(--border-color);
+    background-color: var(--face-color);
+    border-radius: 50%;
+  }
+  
+  .react-clock__hand {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+  }
+  
+  .react-clock__hand__body {
+    position: absolute;
+    /* background-color: rgb(13, 147, 71); */
+    transform: translateX(-50%);
+  }
+  
+  .react-clock__mark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+  }
+  
+  .react-clock__mark__body {
+    position: absolute;
+    background-color: rgb(125, 19, 19);
+    transform: translateX(-50%);
+  }
+  
+  .react-clock__mark__number {
+    position: absolute;
+    left: -40px;
+    width: 80px;
+    text-align: center;
+  }
+  

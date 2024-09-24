@@ -1,0 +1,142 @@
+
+
+input {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100vh;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #f1f1f1;
+
+}
+
+h1 {
+  color: #f1f1f1;
+}
+
+h2 {
+  color: #d2d2d2;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #090606;
+}
+
+
+/* Styling for the time input fields */
+.time-input {
+  width: 80px; /* Make the input field wider */
+  padding: 10px 15px;
+  font-size: 30px;  /* Larger text for inputs */
+  text-align: center;
+  border: 2px solid #3e2020;
+  border-radius: 30px;  /* Rounded corners for the bubbly effect */
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #6c4747;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif; 
+  color: #f1f1f1;  /* Text color */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  caret-color: transparent;
+  cursor: crosshair;
+}
+
+/* Focus effect for the input fields */
+.time-input:focus {
+  border-color: #ababab;  /* Change border color when focused */
+  box-shadow: 0 6px 10px rgba(98, 0, 234, 0.3);  /* Highlight effect */
+}
+
+.time-input::selection {
+  background: none;  /* Prevent highlighting inside the input */
+}
+
+.time-input:focus::selection {
+  background: none;  /* Ensure no text gets highlighted when input is focused */
+}
+
+/* Placeholder styling for the input boxes */
+.time-input::placeholder {
+  color: #c7c7c7;
+  font-size: 20px;  /* Slightly smaller than input text */
+}
+
+/* Colon styling */
+.colon {
+  font-size: 45px;  /* Match the font size of the inputs */
+  font-weight: 700;
+  color: #dddddd;
+  margin: 0 5px;  /* A little space between the inputs */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  caret-color: transparent;
+  cursor: crosshair;
+}
+
+
+
+
+/* Feedback message styling */
+.feedback-message {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: bold;
+  animation: fadeInOut 3s ease-in-out forwards; /* Ensure 'forwards' keeps it at the final state */
+  font-family: 'Nunito', sans-serif; 
+
+}
+
+/* Success message styling */
+.feedback-message.success {
+  color: rgb(111, 210, 111);
+}
+
+/* Error message styling */
+.feedback-message.error {
+  color: red;
+}
+
+/* Fade in, float up, and fade out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly lower */
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0); /* Fade in to original position */
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(-10px); /* Float up slightly */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); /* Fade out while floating up */
+  }
+}
